@@ -1,0 +1,1433 @@
+*
+{
+    font-size: 6vw;
+    margin: 0;
+    padding: 0;
+    font-family: 'Rubik', sans-serif;
+    --SoftBlue: hsl(231, 69%, 60%);
+    --SoftRed: hsl(0, 94%, 66%);
+    --GrayishBlue: hsl(229, 8%, 60%);
+    --VeryDarkBlue: hsl(229, 31%, 21%);
+}
+
+#container
+{
+    width: 100vw;
+}
+
+body
+{
+    overflow-x: hidden;
+}
+
+
+
+
+#main-top-nav
+{
+    padding: 1rem 0.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo-img
+{
+    width: 6rem;
+    height: 1rem;
+}
+
+#hamburger-icon-img
+{
+    width: 0.8rem;
+}
+
+#opened-mobile-nav
+{
+    position: fixed;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--VeryDarkBlue);
+    opacity: .95;
+}
+
+@keyframes showNavMenu {
+    0%
+    {
+        opacity: 0;
+    }
+
+    100%
+    {
+        opacity: .95;
+    }
+}
+
+@keyframes hideNavMenu {
+    0%
+    {
+        opacity: .95;
+    }
+
+    100%
+    {
+        opacity: 0;
+    }
+}
+
+#opened-nav-top-content
+{
+    padding: 1rem 0.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 1rem;
+}
+
+#close-menu-icon
+{
+    width: 0.9rem;
+}
+
+#nav-list
+{
+    text-align: center;
+    list-style-type: none;
+    padding: 0rem 1.5rem;
+    text-transform: uppercase;
+    color: #bbb;
+    margin-top: 1.5rem;
+}
+
+.nav-list-element
+{
+    margin: 0.6rem 0rem;
+    font-weight: 200;
+    font-size: 0.8rem;
+}
+
+.nav-list-element:hover
+{
+    color: #ffffff
+}
+
+hr
+{
+    border: solid rgba(114, 114, 114, .4) 0.1vw;
+}
+
+#login-button
+{
+    margin-top: 1rem;
+    border-radius: 0.3rem;
+    border: solid #ffffff 0.7vw;
+    padding: 0.5rem 5.2rem;
+    color: #ffffff;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    background-color:rgba(0, 0, 0, 0);
+    position: relative;
+    left: 10%;
+}
+
+#login-button:hover
+{
+    background-color: #ffffff;
+    color: #000000;
+}
+
+#nav-bottom-icons
+{
+    text-align: center;
+    position: absolute;
+    bottom: 2rem;
+    left: 38%;
+}
+
+.nav-icons
+{
+    margin-right: 1rem;
+    width: 1rem;
+    cursor: pointer;
+}
+
+#opened-mobile-nav
+{
+    display: none;
+}
+
+#main-img-section
+{
+    display: flex;
+    justify-content: center;
+}
+
+#main-img
+{
+    width: 95vw;
+    margin-top: 2rem;
+    position: relative;
+    z-index: 2;
+    text-align: center;
+}
+
+#main-img-background
+{
+    position: absolute;
+    z-index: 1;
+    top: 3rem;
+    width: 80vw;
+    height: 50vw;
+    border-radius: 4rem 0 0 4rem;
+    background-color: var(--SoftBlue);
+    right: 0;
+    top: 7.8rem;
+}
+
+#bookmark-manager-section
+{
+    margin: auto;
+    margin-top: 2rem;
+    width: 95vw;
+}
+
+#bookmark-manager-header
+{
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+
+#bookmark-manager-text
+{
+    margin-top: 1rem;
+    text-align: center;
+    font-size: 0.8rem;
+    color: var(--GrayishBlue);
+    margin-bottom: 1.5rem;
+}
+
+#bookmark-manager-buttons
+{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+#chrome-button
+{
+    text-align: center;
+    font-size: 0.75rem;
+    color: #ffffff;
+    background-color: var(--SoftBlue);
+    outline: none;
+    border: 0.1vw solid var(--SoftBlue);
+    padding: 0.5rem ;
+    border-radius: 0.3rem;
+    margin-right: 0.6rem;
+    font-weight: 450;
+    margin-left: 0.4rem;
+    box-shadow: 8px 8px 38px -11px rgba(66, 68, 90, 1);
+    cursor: pointer;
+}
+
+#chrome-button:hover
+{
+    background-color: #ffffff;
+    color: var(--SoftBlue);
+}
+
+#firefox-button
+{
+    text-align: center;
+    font-size: 0.75rem;
+    color: #444444;
+    background-color: #ffffff;
+    outline: none;
+    border: 0.1vw solid #ffffff;
+    padding: 0.5rem ;
+    font-weight: 450;
+    border-radius: 0.3rem;
+    box-shadow: 8px 8px 38px -11px rgba(66, 68, 90, 1);
+    cursor: pointer;
+}
+
+#firefox-button:hover
+{
+    border: 0.1vw solid #000000;
+    color: #000000;
+}
+
+#features-section
+{
+    width: 85vw;
+    margin: auto;
+}
+
+#features-header
+{
+    margin-top: 5rem;
+    text-align: center;
+    font-weight: 600;
+}
+
+#features-text
+{
+    margin-top: 1rem;
+    font-size: 0.7rem;
+    text-align: center;
+    color: var(--GrayishBlue);
+}
+
+#features-list
+{
+    list-style-type: none;
+    text-align: center;
+    margin-top: 1.5rem;
+}
+
+.features-list-element
+{
+    margin: 0.7rem 0rem;
+    color: var(--GrayishBlue);
+    font-size: 0.85rem;
+    cursor: pointer;
+    height: 1.15rem;
+}
+
+.features-list-element::before
+{
+    content: "";
+    margin: auto;
+    position: relative;
+    top: 1.75rem;
+    display: none;
+    width: 7rem;
+    height: 1.1vw;
+    background-color: var(--SoftRed);
+    animation: featuresListHover 0.4s;
+}
+
+@keyframes featuresListHover {
+    0%
+    {
+        width: 0;
+    }
+    100%
+    {
+        width: 7rem;
+    }
+    
+}
+
+.features-list-element:hover
+{
+    color: var(--SoftRed);
+}
+
+.features-list-element.active.features-list-element::before
+{
+    display: block;
+}
+
+.features-img-container
+{
+    display: flex;
+    justify-content: center;
+}
+
+#bookmarking-img
+{
+    width:80vw;
+    z-index: 2;
+    margin-top: 3rem;
+}
+
+.features-img-background
+{
+    position: absolute;
+    z-index: 1;
+    width: 80vw;
+    height: 50vw;
+    border-radius: 0 4rem 4rem 0;
+    background-color: var(--SoftBlue);
+    left: 0;
+    top: 54rem;
+}
+
+.features-text-under-img
+{
+    margin-top: 4rem;
+}
+
+.features-header
+{
+    font-weight: 550;
+    text-align: center;
+}
+
+.features-text
+{
+    font-size: 0.8rem;
+    text-align: center;
+    color: var(--GrayishBlue);
+    margin-top: 1rem;
+}
+
+.features-box
+{
+    display: none;
+}
+
+.features-box.active
+{
+    display: block;
+}
+
+.button-container
+{
+    display: flex;
+    justify-content: center;
+}
+
+.more-info-button
+{
+    margin-top: 1.5rem;
+    outline: none;
+    border: 0.1vw solid var(--SoftBlue);
+    font-size: 0.7rem;
+    background-color: var(--SoftBlue);
+    color: #ffffff;
+    padding: 0.5rem 0.8rem;
+    border-radius: 0.2rem;
+    cursor: pointer;
+}
+
+.more-info-button:hover
+{
+    background-color: hsl(231, 41%, 37%);
+}
+
+#searching-img
+{
+    width:80vw;
+    z-index: 2;
+    margin-top: 2rem;
+    margin-left: 1rem;
+}
+
+#sharing-img
+{
+    width:80vw;
+    z-index: 2;
+    margin-top: 2rem;
+    margin-left: 1rem;
+}
+
+#extensions-section-header
+{
+    text-align: center;
+    margin-top: 6rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+#extensions-section-text-under-header
+{
+    margin: auto;
+    text-align: center;
+    font-size: 0.7rem;
+    width: 80vw;
+    color: var(--GrayishBlue);
+    margin-top: 0.5rem;
+}
+
+.browser-box
+{
+    margin: auto;
+    width: 70vw;
+    box-shadow: 0px 0px 42px -25px rgba(66, 68, 90, 1);
+    margin-top: 2rem;
+}
+
+.browser-img-box
+{
+    text-align: center;
+}
+
+.browser-img
+{
+    margin: auto;
+    margin-top: 2rem;
+    width: 3.8rem;
+}
+
+.browser-box-header
+{
+    text-align: center;
+    font-weight: 500;
+    margin-top: 1rem;
+}
+
+.browser-box-text
+{
+    text-align: center;
+    font-size: 0.7rem;
+    margin-top: 0.5rem;
+    color: var(--GrayishBlue);
+}
+
+.background-dots
+{
+    width: 11.7rem;
+    margin-top: 1.5rem;
+}
+
+.install-extension-button-container
+{
+    display: flex;
+    justify-content: center;
+    margin-top: 0.5rem;
+}
+
+.install-extension-button
+{
+    text-align: center;
+    color: #ffffff;
+    background-color: var(--SoftBlue);
+    font-size: 0.7rem;
+    outline: none;
+    border: 0.1vw solid var(--SoftBlue);
+    border-radius: 0.3rem;
+    padding: 0.5rem 0.7rem;
+    margin-bottom: 1rem;
+    cursor: pointer;
+}
+
+.install-extension-button:hover
+{
+    background-color: #ffffff;
+    color: var(--SoftBlue);
+}
+
+#asks-section
+{
+    margin: auto;
+    margin-top: 4rem;
+    width: 90vw;
+}
+
+#asks-section-header
+{
+    margin: auto;
+    width: 60vw;
+    text-align: center;
+    font-weight: 550;
+}
+
+#asks-section-text
+{
+    margin: auto;
+    margin-top: 1rem;
+    width: 90vw;
+    text-align: center;
+    font-size: 0.75rem;
+    color: var(--GrayishBlue);
+}
+
+.question-area
+{
+    display: flex;
+    margin: auto;
+    margin-top: 2rem;
+    justify-content: space-between;
+    width: 100%;
+    height: 1rem;
+    cursor: pointer;
+}
+
+.question-header
+{
+    font-size: 0.7rem;
+    font-weight: 450;
+}
+
+.arrow-icon
+{
+    width: 1rem;
+    height: 1rem;
+    transition: 0.7s;
+    stroke: var(--SoftRed);
+}
+
+.answer-area
+{
+    width: 90%;
+    font-size: 0.8rem;
+    color: var(--GrayishBlue);
+    margin-top: 1rem;
+    line-height: 1.2rem;
+}
+
+.question-section-hr
+{
+    margin-top: 0.6rem;
+}
+
+.answer-area.active 
+{
+    display: block;
+}
+
+.answer-area
+{
+    display: none;
+    overflow: hidden;
+}
+
+#question-section-button
+{
+    outline: none;
+    background-color: var(--SoftBlue);
+    border: 0.1vw solid var(--SoftBlue);
+    border-radius: 0.2rem;
+    padding: 0.5rem 0.8rem;
+    color: #ffffff;
+    font-size: 0.8rem;
+    margin-top: 2.5rem;
+}
+
+#contact-section
+{
+    background-color: var(--SoftBlue);
+    width: 100vw;
+    color: #ffffff;
+    padding-top: 2rem;
+    margin-top: 4rem;
+}
+
+#contact-section-text
+{
+    font-size: 0.7rem;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+}
+
+#contact-section-header
+{
+    margin: auto;
+    text-align: center;
+    margin-top: 0.7rem;
+    width: 90vw;
+    font-weight: 600;
+}
+
+#error-background
+{
+    background-color: var(--SoftRed);
+    width: 11.5rem;
+    height: 2.5rem;
+    z-index: 1;
+    margin-top: 2rem;
+    border-radius: 0.2rem;
+
+}
+
+#input-section
+{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top:-3rem;
+    width: 100vw;
+}
+
+.question-area:hover
+{
+    color: var(--SoftRed);
+}
+
+#input-area
+{
+    z-index: 2;
+    position: relative;
+    left: 0.6rem;
+    top: 0.5rem;
+}
+
+#email-field
+{
+    width: 9rem;
+    outline: none;
+    border: none;
+    font-weight: 450;
+    font-size: 0.7rem;
+    padding: 0.3rem 1.5rem 0.3rem 0.6rem;
+    border-radius: 0.2rem;
+    margin-top: 4rem;
+    margin-left: -1.1rem;
+}
+
+#error-section
+{
+    display: none;
+    justify-content: center;
+    position: absolute;
+    margin-left: 2.65rem;
+    margin-top: -0.68rem;
+}
+
+#error-icon
+{
+    position: absolute;
+    top: 4.2rem;
+    left: 8.6rem;
+    width: 1rem;
+    display: none;
+}
+
+#error-text
+{
+    margin-left: 0.3rem;
+    font-size: 0.5rem;
+    margin-top: 1.7rem;
+    font-weight: 450;
+
+}
+
+#contact-us-button
+{
+    outline: none;
+    border: 0.1vw solid var(--SoftRed);
+    border-radius: 0.2rem;
+    background-color: var(--SoftRed); 
+    font-size: 0.6rem;
+    color: #ffffff;
+    font-weight: 500;
+    padding: 0.5rem 4.1rem;
+    position: relative;
+    top: -1rem;
+    cursor: pointer;
+    margin-bottom: 1.2rem;
+}
+
+#contact-us-button:hover
+{
+    background-color: hsl(0, 100%, 80%);
+}
+
+#footer
+{
+    text-align: center;
+    background-color: var(--VeryDarkBlue);
+    padding-bottom: 2rem;
+}
+
+#footer-list
+{
+    margin: auto;
+    margin-top: 1.2rem;
+    width:30%;
+    list-style-type: none;
+}
+
+
+.footer-list-element
+{
+    color: #ffffff;
+    margin-bottom: 1.5rem;
+    font-size: 0.8rem;
+    cursor: pointer;
+}
+
+.footer-list-element:hover
+{
+    color: #aaaaaa;
+}
+
+#footer-icon-area
+{
+    margin-top: 2.5rem;
+}
+
+#footer-twitter-icon
+{
+    margin-left: 1.5rem;
+}
+
+.footer-icon
+{
+    cursor: pointer;
+    width: 1rem;
+}
+
+#nav-list-desktop
+{
+    display: none;
+}
+
+#desktop-login-button
+{
+    display: none;
+}
+
+#nav-right-content
+{
+    display: none;
+}
+
+.flex
+{
+    display: block;
+}
+
+@media (min-width:550px) {
+    *
+    {
+        font-size: 3.5vw;
+    }
+
+    .logo-img
+    {
+        width: 7rem;
+        height: 1.2rem;
+    }
+
+    #hamburger-icon-img
+    {
+        display: none;
+    }
+
+    #nav-list-desktop
+    {
+        list-style-type: none;
+        display: flex;
+        color: #333;
+    }
+
+    #opened-mobile-nav
+    {
+        display: none !important;
+    }
+
+    .nav-list-desktop-element
+    {
+        margin: 0.6rem 0rem;
+        margin-right: 0.9rem;
+        font-weight: 200;
+        font-size: 0.7rem;
+        cursor: pointer;
+        text-transform: uppercase;
+
+    }
+
+    .nav-list-desktop-element:hover
+    {
+        color: var(--SoftRed)
+    }
+
+    #desktop-login-button
+    {
+        display: block;
+        cursor: pointer;
+        background-color: var(--SoftRed);
+        border: 0.4vw solid var(--SoftRed);
+        color: #ffffff;
+        padding: 0.1rem 1.6rem;
+        height: 1.8rem;
+        border-radius: 0.4rem;
+        text-transform: uppercase;
+        font-weight: 500;
+        font-size: 0.7rem;
+        margin-top: 0.1rem;
+        box-shadow: 0px 20px 45px -10px rgba(66, 68, 90, 1);
+    }
+
+    #desktop-login-button:hover
+    {
+        background-color: #ffffff;
+        color: var(--SoftRed);
+    }
+
+    #nav-right-content
+    {
+        display: flex;
+    }
+    
+    #main-img
+    {
+        width: 80vw;
+    }
+
+    #bookmark-manager-text
+    {
+        margin: auto;
+        width: 80vw;
+        margin-top: 1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    #bookmark-manager-section
+    {
+        margin-top: 4rem;
+    }
+
+    .features-list-element::before
+    {
+        content: "";
+        margin: auto;
+        position: relative;
+        top: 1.58rem;
+        display: none;
+        width: 10rem;
+
+    }
+
+    @keyframes featuresListHover {
+        0%
+        {
+            width: 0;
+        }
+        100%
+        {
+            width: 10rem;
+        }
+        
+    }
+
+    .features-img-background
+    {
+        top: 60rem;
+    }
+    
+    #bookmarking-img
+    {
+        margin-top: 4;
+    }
+
+    #searching-img
+    {
+        margin-top: 4;
+    }
+
+    #sharing-img
+    {
+        margin-top: 4;
+    }
+
+    .browser-box
+    {
+        width: 41vw;
+    }
+
+    #error-background
+    {
+        margin-left: 5.95rem;
+    }
+}
+
+@media (min-width:1000px) {
+    *
+    {
+        font-size: 2.5vw;
+    }
+
+    #main-img-section
+    {
+        width: 20rem;
+    }
+
+    #bookmark-manager-section
+    {
+        width: 16rem;
+        margin-left: 2rem;
+    }
+
+    #bookmark-manager-header
+    {
+        text-align: left;
+        font-size: 1.5rem;
+    }
+
+    #bookmark-manager-text
+    {
+        text-align: left;
+        width: 15rem;
+        margin-left: 0;
+    }
+
+    #main-img
+    {
+        width: 20rem;
+        margin-top: 3rem;
+    }
+
+    #main-img-background
+    {
+        width: 15rem;
+        height: 9rem;
+        top: 12rem;
+        right: 0rem;
+    }
+
+    .flex
+    {
+        display: flex;
+        flex-direction: row-reverse
+    }
+    
+    #bookmark-manager-buttons
+    {
+        justify-content: start;
+    }
+
+    #chrome-button
+    {
+        margin-left: 0;
+    }
+
+    hr
+    {
+        display: none;
+    }
+
+    #last-hr
+    {
+        display: block;
+    }
+
+    #features-list
+    {
+        display: flex;
+    }
+
+    #features-header
+    {
+        font-size: 1.5rem;
+    }
+    
+    #features-text
+    {
+        font-size: 0.8rem;
+        margin: auto;
+        margin-top: 1rem;
+        width: 24rem;
+    }
+
+    #features-list
+    {
+        margin-bottom: 1rem;
+    }
+
+    .features-list-element
+    {
+        width: 9rem;
+        margin-left: 1.5rem;
+        margin-bottom: 0;
+    }
+
+    .features-list-element::before
+    {
+        height: 0.12rem;
+        left: -0.5rem;
+        top: 2.10rem;
+    }
+
+    #bookmarking-img
+    {
+        width: 16rem;
+        margin-right: 3rem;
+        position: relative;
+    }
+
+    #searching-img
+    {
+        width: 16rem;
+        margin-right: 3rem;
+        position: relative;
+    }
+
+    #sharing-img
+    {
+        width: 16rem;
+        margin-right: 3rem;
+        position: relative;
+    }
+
+    .features-img-background
+    {
+        width: 15rem;
+        height: 10rem;
+        top: 43rem;
+    }
+
+    .features-box.active
+    {
+        display: flex;
+    }
+
+    .features-img-container
+    {
+        display: block;
+    }
+
+    .features-header
+    {
+        text-align: left;
+    }
+
+    .features-text
+    {
+        text-align: left;
+    }
+
+    .button-container
+    {
+        display: block;
+    }
+
+    #extensions-section-text-under-header
+    {
+        width: 23.5rem;
+    }
+
+    #browser-container
+    {
+        margin: auto;
+    }
+
+    .browser-box
+    {
+        width: 11.7rem;
+        margin: 0;
+        margin-right: 1rem;
+        margin-top: 3rem;
+        height: 15rem;
+    }
+
+    .browser-box:nth-child(2)
+    {
+        margin-top:6rem;
+    }
+
+    .browser-box:nth-child(3)
+    {
+        margin-top:9rem;
+    }
+
+    .flex-center
+    {
+        display: flex;
+        justify-content: center;
+    }
+
+    #asks-section-text
+    {
+        width: 23.5rem;
+    }
+
+    .question-area
+    {
+        width: 23.5rem;
+        
+    }
+
+    .answer-area
+    {
+        width: 23.5rem;
+        margin: auto;
+        margin-top: 1rem;
+    }
+
+    .question-section-hr
+    {
+        display: block;
+        width: 25rem;
+        margin-left: 6rem;
+    }
+
+    .button-container
+    {
+        text-align: center;
+    }
+
+    #contact-section
+    {
+        width: 100%;
+    }
+
+    .flex-reverse
+    {
+        display: flex;
+        flex-direction: row;
+    }
+
+    #input-area
+    {
+        margin-left: 7rem;
+    }
+
+    #contact-us-button
+    {
+        margin-right: 11rem;
+        margin-top: 2.45rem;
+        width: 8rem;
+        padding: 0.55rem 0.1rem;
+    }
+
+    #email-field
+    {
+        padding: 0.5rem 1.5rem 0.5rem 0.6rem;
+    }
+
+    #error-icon
+    {
+        top: 4.35rem ;
+    }
+
+    #error-background
+    {
+        margin-left: 10.15rem;   
+        height: 3rem;
+    }
+
+    #error-text
+    {
+        margin-top: 2.2rem;
+    }
+
+    #footer
+    {
+        display: flex;
+        padding: 0;
+    }
+
+    #footer-logo
+    {
+        position: relative;
+        width: 50%;
+        height: 20%;
+        top: -2rem;
+        left: -4rem;
+        font-size: 14rem;
+    }
+
+    #footer-list
+    {
+        display: flex;
+        margin-left: -7rem;
+        margin-bottom: 0;
+        margin-top: 2rem;
+        height: 3rem;
+    }
+
+    .footer-list-element
+    {
+        margin-right:1.4rem;
+    }
+
+    #footer-icon-area
+    {
+        margin-top: 2rem;
+        height: 1rem;
+        margin-right: 2rem;
+    }
+}
+
+
+@media (min-width:1300px) {
+    *
+    {
+        font-size: 1.5vw;
+    }
+
+    #bookmark-manager-section
+    {
+        margin-left: 4rem;
+    }
+
+    body
+    {
+        min-width: 100vw;
+    }
+
+    #main-img-section
+    {
+        position: relative;
+        left: -5rem;
+    }
+
+    #bookmark-manager-header
+    {
+        font-size: 1.9rem;
+        width: 20rem;
+    }
+
+    #bookmark-manager-text
+    {
+        font-size: 1rem;
+        width: 30rem;
+    }
+
+    #desktop-login-button
+    {
+        border: 0.15vw solid var(--SoftRed);
+    }
+
+    #desktop-login-button:hover
+    {
+        border: 0.15vw solid var(--SoftRed);
+    }
+
+    #chrome-button
+    {
+        padding: 0.8rem;
+    }
+
+    #desktop-login-button
+    {
+        margin-right: 1rem;
+    }
+
+    .nav-list-desktop-element
+    {
+        margin-right: 2rem;
+    }
+
+    #main-img
+    {
+        width: 30rem;
+    }
+
+    #main-img-background
+    {
+        width: 20rem;
+        height: 13rem;
+        top: 8rem;
+        right: -5rem;
+    }
+
+    #last-hr
+    {
+        margin: auto;
+        width: 40rem;
+    }
+
+    #features-list
+    {
+        justify-content: center;
+    }
+
+    .features-img-background
+    {
+        top: 49rem;
+        width: 17rem;
+        height: 12rem;
+    }
+
+    #bookmarking-img
+    {
+        width: 22rem;
+        margin-right: 6rem;
+    }
+
+    .features-text-under-img
+    {
+        width: 30vw;
+    }
+
+    .features-header
+    {
+        font-size: 1.3rem;
+    }
+
+    .features-text
+    {
+        font-size: 0.9rem;
+    }
+
+    .button-container
+    {
+        text-align: left;
+    }
+
+    .more-info-button
+    {
+        padding: 0.7rem 1.1rem;
+        font-size: 0.9rem;
+    }
+
+    .question-section-hr
+    {
+        margin-left: 17.5rem;
+    }
+
+    .button-container
+    {
+        text-align: center;
+    }
+
+    #contact-section-header
+    {
+        width: 25vw;
+        font-size: 1.2rem;
+    }
+
+    #input-section
+    {
+        width: 30vw;
+    }
+
+    #contact-us-button
+    {
+        margin-left: 15rem;
+    }
+
+    #input-area
+    {
+        margin-left: 35rem;
+    }
+
+    #email-field
+    {
+        width: 10rem;
+    }
+
+    #error-background
+    {
+        margin-left: 18.7rem;
+        height: 3.5rem;
+    }
+
+    #error-icon
+    {
+        left: 9.6rem;
+    }
+
+    #error-text
+    {
+        font-size: 0.7rem;
+    }
+
+    #error-background
+    {
+        width: 12.5rem;
+    }
+
+    #footer-logo
+    {
+        width: 30%;
+        height: 30%;
+        top: -1.3rem;
+    }
+
+    #footer-list
+    {
+        justify-content: center;
+    }
+}
